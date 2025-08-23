@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/20 13:29:30 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/20 17:45:46 by malhassa         ###   ########.fr       */
+/*   Created: 2025/08/21 14:34:27 by malhassa          #+#    #+#             */
+/*   Updated: 2025/08/21 14:45:47 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char *ft_itoa(int n)
         ptr[0] = (num % 10) + '0';
     return (ptr);
 }
-// int main(void)
-// {
-//     printf("%s",ft_itoa(2147483647));
-// }
+int main(void)
+{
+    printf("%s",ft_itoa(2147483647));
+}
