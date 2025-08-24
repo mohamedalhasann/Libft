@@ -10,16 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd,&c,1);
+	write(fd, &c, 1);
 }
 
 // int main(void)
 // {
 //     int fdd = open("testtt3.txt",O_CREAT | O_WRONLY | O_TRUNC,0664);
-    
- 
+
 // }

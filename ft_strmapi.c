@@ -11,22 +11,23 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int i;
-    char    *ptr;
-    
-    ptr = (char *)malloc(ft_strlen(s) + 1);
-    if(!ptr)
-    return(NULL);
-    i = 0;
-    while (s[i])
-    {
-        ptr[i] = f(i,s[i]);
-        i++;
-    }
-    ptr[i] = '\0';
-    return (ptr);
+	int		i;
+	char	*ptr;
+
+	ptr = (char *)malloc(ft_strlen(s) + 1);
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		ptr[i] = f(i, s[i]);
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
 // int main(void)
 // {
@@ -34,5 +35,5 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 //  x = "hello";
 // printf("%s\n" , ft_strmapi(x,to_upper));
-// // result now points to "HELLO"    
+// // result now points to "HELLO"
 // }

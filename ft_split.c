@@ -6,120 +6,124 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 13:40:39 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/22 22:12:14 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/24 16:15:12 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-int    countwords(char const *s , char c)
+int	countwords(char const *s, char c)
 {
-    int j;
+	int	counter;
+	int	ccheck;
+	int	i;
 
-    j = 0;
-    while (*(char *)s)
-    {
-     if (*(char *)s == c)
-        j++;
-    s++;
-    }
-    return (j + 1);
+	i = 0;
+	counter = 0;
+	ccheck = 0;
+	while (s[i])
+	{
+		if (s[i] != c && !ccheck)
+		{
+			ccheck = 1;
+			counter++;
+		}
+		else if (s[i] == c)
+			ccheck = 0;
+		i++;
+	}
+	return (counter);
 }
 
-int lentillfound(char const *s,char c)
+int	lentillfound(char const *s, char c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] && s[i] != c)
-        i++;
-    return (i);
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
 }
 
-char    *wordspliter(char const *s,char c)
+char	*wordspliter(char const *s, char c)
 {
-    char    *ptr;
-    int i;
+	char	*ptr;
+	int		i;
 
-    i = 0;
-    ptr = (char *)malloc(lentillfound(s,c)+ 1);
-    while (s[i] && s[i] != c)
-    {
-        ptr[i] = s[i];
-        i++;
-    }
-    ptr[i] = '\0';
-    return (ptr);
+	i = 0;
+	ptr = (char *)malloc(lentillfound(s, c) + 1);
+	if (!ptr)
+		return (NULL);
+	while (s[i] && s[i] != c)
+	{
+		ptr[i] = s[i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
-// //hello mohamed in our world
-char **ft_split(char const *s, char c)
+
+char	**freeptr(char **ptr, int j)
 {
-    char    **largeptr;
-    char *ptr;
-    int k;
-    int i;
-    int j;
+	int	i;
 
-    ptr = (char *)s;
-    largeptr = malloc((countwords(s,c) + 1)*sizeof(char *));
-    k = 0;
-    i = 0;
-    j = 0;
-    while (ptr[k])
-    {
-        while (ptr[k] && ptr[k] == c)
-            k++;
-        if(ptr[k] != c && ptr[k])
-        {
-        largeptr[j] = wordspliter(ptr + k,c);
-        j++;
-        }
-        while(ptr[k] && ptr[k] != c)
-            k++;
-    }
-    
-    largeptr[j] = NULL;
-    return (largeptr);
+	i = 0;
+	while (i < j)
+	{
+		free(ptr[i]);
+		i++;
+	}
+	free(ptr);
+	return (NULL);
 }
 
+char	**ft_split(char const *s, char c)
+{
+	char	**largeptr;
+	int		j;
 
-void print_split(char **arr) {
-    int i = 0;
-
-    if (arr == NULL) {
-        printf("NULL\n");
-        return;
-    }
-
-    while (arr[i] != NULL) {
-        printf("[%s]\n", arr[i]);  
-        i++;
-    }
-    printf("----\n");
+	largeptr = malloc((countwords(s, c) + 1) * sizeof(char *));
+	if (!largeptr)
+		return (NULL);
+	j = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s != c && *s)
+		{
+			largeptr[j] = wordspliter(s, c);
+			if (!largeptr[j])
+				return (freeptr(largeptr, j));
+			j++;
+		}
+		while (*s && *s != c)
+			s++;
+	}
+	largeptr[j] = NULL;
+	return (largeptr);
 }
 
+// void print_split(char **arr) {
+//     int i = 0;
 
-int main(void) {
-    char **result;
+//     if (arr == NULL) {
+//         printf("NULL\n");
+//         return ;
+//     }
 
-    result = ft_split(":", ':');
-    print_split(result);
+//     while (arr[i] != NULL) {
+//         printf("[%s]\n", arr[i]);
+//         i++;
+//     }
+//     printf("----\n");
+// }
 
-    result = ft_split("A", ':');
-    print_split(result);
+// int main(void) {
+//     char **result;
 
-    result = ft_split("   split   this   string   ", ' ');
-    print_split(result);
+//     result = ft_split("hello!",' ');
+// 	print_split(result);
 
-    result = ft_split("one,two,,,three,four,,", ',');
-    print_split(result);
-
-    result = ft_split("word1\tword2\t\tword3", '\t');
-    print_split(result);
-
-    result = ft_split("line1\nline2\nline3", '\n');
-    print_split(result);
-    
-
-    return 0;
-}
+//     return (0);
+// }

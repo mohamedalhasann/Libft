@@ -6,37 +6,30 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 12:34:44 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/19 14:07:04 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/23 19:20:29 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
+#include <bsd/bsd.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
-	int	k;
+	size_t	i;
+	size_t	j;
 
+	if (!(little[0]))
+		return ((char *)big);
 	i = 0;
-	j = 0;
-	while (len-- && big[i])
+	while (i < len && big[i])
 	{
-		k = i;
-		while (big[k] == little[j] && len--)
+		j = 0;
+		while (i + j < len && big[i + j] == little[j])
 		{
 			j++;
-			k++;
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
 		}
-		if (little[j])
-		{
-			j = 0;
-			k = i;
-		}
-		else
-			return ((char *)(&big[i]));
 		i++;
 	}
 	return (NULL);
@@ -44,10 +37,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 // int main(void)
 // {
-//      const char *largestring = "Foo Bar Baz";
-//            const char *smallstring = "Bar";
-//            char *ptr;
+//      char *s1 = "oh no not the empty string !";
+//  	char *s2 = "";
+//  	size_t max = 0;
+//  	char *i1 = strnstr(s1, s2, max);
+//  	char *i2 = ft_strnstr(s1, s2, max);
+// 	printf("%s\n%s",i1,i2);
 
-//            ptr = ft_strnstr(largestring, smallstring,9);
-//            printf("%s",ptr);
 // }
