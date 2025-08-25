@@ -6,11 +6,11 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:07:42 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/19 13:33:35 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/25 19:00:51 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

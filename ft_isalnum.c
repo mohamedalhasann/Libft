@@ -6,12 +6,11 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 16:53:13 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/16 16:46:09 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/25 18:50:01 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

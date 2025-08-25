@@ -6,12 +6,11 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 19:02:16 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/17 13:49:50 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/25 18:56:34 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

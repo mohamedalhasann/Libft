@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 20:30:41 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/25 17:42:40 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/25 18:48:30 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	temp = ft_lstlast(*lst);
+	temp = ft_lstlast(*lst);	
 	temp->next = new;
 }
 
@@ -31,7 +31,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // int main(void)
 // {
 //     t_list *list = NULL;
-//     t_list *node1;
+//     t_list *node1;	
 //     t_list *node2;
 //     t_list *node3;
 

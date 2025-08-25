@@ -6,11 +6,11 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 16:59:59 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/19 16:00:14 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/25 18:58:54 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
