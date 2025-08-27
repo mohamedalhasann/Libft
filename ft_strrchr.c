@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 12:15:44 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/23 16:41:34 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/26 23:57:41 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptr;
-	int		n;
+	size_t	n;
 	char	x;
 
 	x = (unsigned char)c;

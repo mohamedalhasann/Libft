@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 23:37:31 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/23 16:39:28 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/26 16:06:59 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	char	c;
-
-	c = '\n';
-	if (s)
-		ft_putstr_fd(s, fd);
-	write(fd, &c, 1);
+	ft_putstr_fd(s, fd);
+	write(fd,"\n", 1);
 }
 
 // int	main(void)

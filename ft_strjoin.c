@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 15:20:42 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/19 17:41:10 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/26 16:28:06 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr = malloc(length + 1);
 	if (!ptr)
 		return (NULL);
-	while (*(char *)s1 != '\0')
+	while (*s1)
 	{
-		ptr[j] = *(char *)s1;
+		ptr[j] = *s1;
 		s1++;
 		j++;
 	}
-	while (*(char *)s2)
+	while (*s2)
 	{
-		ptr[j] = *(char *)s2;
+		ptr[j] = *s2;
 		j++;
 		s2++;
 	}

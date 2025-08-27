@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 17:47:38 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/20 19:55:52 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/26 16:53:30 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
+	size_t		i;
 	char	*ptr;
 
 	ptr = (char *)malloc(ft_strlen(s) + 1);

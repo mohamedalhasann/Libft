@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 12:34:44 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/23 19:20:29 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:04:02 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!(little[0]))
+	if (little[0] == '\0')
 		return ((char *)big);
 	i = 0;
 	while (i < len && big[i])

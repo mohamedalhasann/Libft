@@ -6,13 +6,13 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 16:56:34 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/25 18:52:17 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/26 14:36:53 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include"libft.h"
 
 int	ft_isdigit(int c)
 {
-	return (!(c < '0' || c > '9'));
+	return ((c >= '0' && c <= '9'));
 }

@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 16:58:24 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/19 20:57:33 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/27 00:04:59 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	len;
+	size_t	i;
+	size_t	len;
 
+	if (!s1 || !set)
+		return (NULL);
 	len = ft_strlen(s1);
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))

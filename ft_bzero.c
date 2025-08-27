@@ -6,11 +6,11 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:28:53 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/14 18:07:45 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/26 14:42:59 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

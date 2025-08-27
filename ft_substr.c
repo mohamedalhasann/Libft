@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 13:07:37 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/19 17:33:02 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/27 00:09:36 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substring = (char *)malloc(len + 1);
 	if (substring == NULL)
 		return (NULL);
-	while (len-- && temp)
-	{
+	while (len--)
 		substring[j++] = *temp++;
-	}
 	substring[j] = '\0';
 	return (substring);
 }
