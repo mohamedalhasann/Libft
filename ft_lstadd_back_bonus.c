@@ -23,7 +23,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	temp = ft_lstlast(*lst);	
+	temp = ft_lstlast(*lst);
 	temp->next = new;
 }
 
@@ -31,7 +31,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // int main(void)
 // {
 //     t_list *list = NULL;
-//     t_list *node1;	
+//     t_list *node1;
 //     t_list *node2;
 //     t_list *node3;
 

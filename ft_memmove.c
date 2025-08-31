@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 19:02:16 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/26 15:49:56 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/27 16:00:31 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	cdest = (unsigned char *)dest;
 	csrc = (unsigned char *)src;
-	if (!dest && !src) // not sure 
-		return (dest);
+	if (!dest && !src)
+		return (NULL);
 	if (cdest > csrc)
 	{
 		while (n--)
@@ -35,8 +35,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 }
 // int	main(void)
 // {
-// 	char	str[100] = "Learningisfun";
-// 	printf("Original string :%s\n ", str);
-// 	ft_memmove(str + 8, str, 10);
-// 	printf("memmove overlap : %s\n ", str);
+// 	// char	str[100] = "Learningisfun";
+// 	// printf("Original string :%s\n ", str);
+// 	printf("%s",ft_memmove(((void*)0), ((void*)0), 0));
+// 	// printf("memmove overlap : %s\n ", str);
 // }

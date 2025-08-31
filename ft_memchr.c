@@ -6,7 +6,7 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 12:26:00 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/26 15:32:51 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/27 13:51:26 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n--)
 	{
 		if (*str == x)
-			return ((void *)str); // ??
+			return ((void *)str);
 		str++;
 	}
 	return (0);

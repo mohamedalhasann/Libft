@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	intlen(int x)
+static int	intlen(int x)
 {
 	int	i;
 

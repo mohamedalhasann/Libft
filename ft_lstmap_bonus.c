@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/14 16:56:04 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/27 13:55:09 by malhassa         ###   ########.fr       */
+/*   Created: 2025/08/28 17:47:06 by malhassa          #+#    #+#             */
+/*   Updated: 2025/08/28 20:47:06 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	return (c >= 0 && c <= 127);
+	t_list	*newn;
+	t_list	*temp;
+
+	newn = NULL;
+	while (lst)
+	{
+		temp = ft_lstnew(f(lst->content));
+		if (!temp)
+		{
+			ft_lstclear(&newn, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newn, temp);
+		lst = lst->next;
+	}
+	return (newn);
 }

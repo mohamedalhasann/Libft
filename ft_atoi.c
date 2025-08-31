@@ -6,11 +6,11 @@
 /*   By: malhassa <malhassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 16:51:47 by malhassa          #+#    #+#             */
-/*   Updated: 2025/08/25 19:03:54 by malhassa         ###   ########.fr       */
+/*   Updated: 2025/08/27 14:11:06 by malhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -34,3 +34,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
+
+// int	main(void)
+// {
+// 	char 	*ptr;
+
+// 	ptr = "--324432";
+// 	printf("%d",ft_atoi(ptr));	
+// }

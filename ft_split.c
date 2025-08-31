@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	countwords(char const *s, char c)
+static int	countwords(char const *s, char c)
 {
 	int	counter;
 	int	ccheck;
@@ -35,7 +35,7 @@ int	countwords(char const *s, char c)
 	return (counter);
 }
 
-int	lentillfound(char const *s, char c)
+static int	lentillfound(char const *s, char c)
 {
 	int	i;
 
@@ -45,7 +45,7 @@ int	lentillfound(char const *s, char c)
 	return (i);
 }
 
-char	*wordspliter(char const *s, char c)
+static char	*wordspliter(char const *s, char c)
 {
 	char	*ptr;
 	int		i;
@@ -63,7 +63,7 @@ char	*wordspliter(char const *s, char c)
 	return (ptr);
 }
 
-char	**freeptr(char **ptr, int j)
+static char	**freeptr(char **ptr, int j)
 {
 	int	i;
 
